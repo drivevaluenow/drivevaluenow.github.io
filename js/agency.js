@@ -46,5 +46,16 @@
   $('.portfolio-modal').on('hidden.bs.modal', function(e) {
     $(".navbar").removeClass("d-none");
   })
+  //nav bar background color on scroll
+  $(document).ready(function(){
+    $(window).scroll(function(){
+        if($(window).scrollTop() > $(window).height()){
+            $("#mainNav").css({"background-color":"transparent"});   
+        }
+        else{
+            $("#mainNav").css({"background-color":"white"});
+        }
 
+    })
+})
 })(jQuery); // End of use strict
