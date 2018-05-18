@@ -2,11 +2,24 @@
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url('../img/header-bg.jpg');
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  @include background-cover;
+  overflow: hidden;
+  position: relative;
+ // background-image: url('../img/header-bg.jpg');
+  
+  .container {
+    position: relative;
+  }
+  .video-background {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    //@include background-cover;
+    object-fit: cover;
+    
+  }
   .intro-text {
     padding-top: 150px;
     padding-bottom: 100px;
@@ -26,38 +39,6 @@ header.masthead {
   }
 }
 
-
-// .fullscreen-bg {
-//   position: fixed;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   overflow: hidden;
-//   z-index: -100;
-// }
-
-// .fullscreen-bg__video {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-// }
-
-// @media (min-aspect-ratio: 16/9) {
-//   .fullscreen-bg__video {
-//     height: 300%;
-//     top: -100%;
-//   }
-// }
-
-// @media (max-aspect-ratio: 16/9) {
-//   .fullscreen-bg__video {
-//     width: 300%;
-//     left: -100%;
-//   }
-// }
 @media(min-width:768px) {
   header.masthead {
     .intro-text {
@@ -80,3 +61,12 @@ header.masthead {
     }
   }
 }
+// #myVideo {
+//   position: absolute;
+//   left: 0;
+//   top:0;
+//   min-width: 100%; 
+//   //min-height: 300px;
+//   height: 90%;
+// }
+
